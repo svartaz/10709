@@ -2,22 +2,25 @@
   broder: 1px solid red
 
 body
-  font-family: 'Helvetica Neue', Helvetica, sans-serif
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif
   font-weight: 400
   max-inline-size: 64rem
   margin-inline: auto
 
   display: flex
   flex-direction: column
-  gap: 2rem
+  gap: 1rem
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, ul, p
   inline-size: fit-content
   margin-inline: auto
 
-p
-  margin-inline: auto
-  inline-size: fit-content
+ul
+  list-style-type: square
+
+ul ul
+  margin-inline: unset
+  padding-inline-start: 1rem
 
 table
   border-collapse: collapse
@@ -40,6 +43,10 @@ table
     th
       text-align: end
 
+table.c
+  td
+    text-align: center
+
 .target
   font-family: 'Times New Roman', serif
 
@@ -47,7 +54,12 @@ table
   font-family: 'Courier New', 'Courier', monospace
 
 .ipa
-  font-family: 'Courier New', serif
+  font-family: 'Times New Roman', serif
+
+  &::before
+    content: '['
+  &::after
+    content: ']'
 
 .sample
   inline-size: 36rem
@@ -71,7 +83,8 @@ table
     ruby-position: over
 
     rt
-      font-size: x-small
+      font-size: xx-small
+      opacity: .5
 
     ruby
       ruby-position: under
@@ -83,6 +96,7 @@ table.progress
   font-size: xx-small
 
   th, td
+    padding-inline: .125rem
     padding-block: 0
 
 table.dictionary

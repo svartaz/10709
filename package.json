@@ -13,7 +13,9 @@
   "description": "",
   "prettier": {
     "singleQuote": true,
-    "semi": true
+    "semi": true,
+    "printWidth": 256,
+    "objectWrap": "collapse"
   },
   "devDependencies": {
     "@types/node": "22.13.14",

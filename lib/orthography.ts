@@ -1,6 +1,6 @@
 import { replaceEach } from './common';
 
-export const orthography = (s: string) =>
+export default (s: string): string =>
   replaceEach(
     s,
     {
